@@ -1,0 +1,154 @@
+
+////////////////  XML //////////////////////
+
+/////////   WORLDCUP SCORE APP  ////////////
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/stadium"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peru"
+                android:textSize="30sp" />
+            <ImageView
+                android:layout_width="114dp"
+                android:layout_height="100dp"
+                android:src="@drawable/peruflag"/>
+            <TextView
+                android:id="@+id/goal_teamA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80sp"
+                android:gravity="center"
+                android:text="0"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:onClick="buttonGoal_teamA"
+                android:textSize="20sp"
+                android:text="Goal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Fouls"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/yellowcard"/>
+                <TextView
+                    android:id="@+id/yellow_teamA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="50sp"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="0"/>
+                <Button
+                    android:onClick="buttonYellow_TeamA"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="40sp"
+                    android:text="+"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Denmark"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/denmarkflag"/>
+            <TextView
+                android:id="@+id/goal_teamB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="80sp"
+                android:text="0"/>
+            <Button
+                android:onClick="buttonGoal_teamB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textSize="20sp"
+                android:text="Goal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Fouls"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/yellowcard"/>
+                <TextView
+                    android:id="@+id/yellow_teamB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="50sp"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="0"/>
+                <Button
+                    android:onClick="buttonYellow_TeamB"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="40sp"
+                    android:text="+"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Reset"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+
+////////////////  JAVA code //////////////////////
+
+/////////   WORLDCUP SCORE APP  ////////////
+
+package com.example.android.worldcupscore;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    int goalTeamA = 0;
+    int goalTeamB = 0;
+    int yellowTeamA = 0;
+    int yellowTeamB = 0;
+    int redTeamA = 0;
+    int redTeamB = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+/////////////////// TEAM A ///////////////////////
+    public void buttonGoal_teamA(View view){
+        goalTeamA = goalTeamA + 1;
+        displayGoalTeamA(goalTeamA);
+    }
+    public void displayGoalTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.goal_teamA);
+        scoreView.setText(String.valueOf(score));
+    }
+    public void buttonYellow_TeamA(View view){
+        yellowTeamA = yellowTeamA + 1;
+        displayYellowTeamA(yellowTeamA);
+    }
+    public void displayYellowTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.yellow_teamA);
+        scoreView.setText(String.valueOf(score));
+    }
+
+/////////////////// TEAM B ///////////////////////
+    public void buttonGoal_teamB(View view){
+        goalTeamB = goalTeamB + 1;
+        displayGoalTeamB(goalTeamB);
+    }
+    public void displayGoalTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.goal_teamB);
+        scoreView.setText(String.valueOf(score));
+    }
+    public void buttonYellow_TeamB(View view){
+        yellowTeamB = yellowTeamB + 1;
+        displayYellowTeamB(yellowTeamB);
+    }
+    public void displayYellowTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.yellow_teamB);
+        scoreView.setText(String.valueOf(score));
+    }
+
+/////////////////////  RESET BUTTON //////////////
+    public void reset_button(View view){
+        goalTeamA = 0;
+        goalTeamB = 0;
+        yellowTeamA = 0;
+        yellowTeamB = 0;
+        displayGoalTeamA(goalTeamA);
+        displayGoalTeamB(goalTeamB);
+        displayYellowTeamA(yellowTeamA);
+        displayYellowTeamB(yellowTeamB);
+    }
+
+}

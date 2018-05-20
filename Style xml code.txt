@@ -1,0 +1,15 @@
+
+////////////////  Style XML code //////////////////////
+
+/////////   WORLDCUP SCORE APP  ////////////
+
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Primary theme color of the app (sets background color of app bar) -->
+        <item name="colorPrimary">#a3f2dc</item>
+        <!-- Background color of buttons in the app -->
+        <item name="colorButtonNormal">#232221</item>
+        <item name="android:textColor">#ffffff</item>"
+    </style>
+</resources>
